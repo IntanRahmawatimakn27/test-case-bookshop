@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Titan+One&display=swap');
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-family: "Ga Maamli", sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px; /* Make "Categories List" text larger */
+    text-align: center; /* Center-align the heading */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    padding: 30px;
+}
+.btn-add {
+    background-color: #28a745;
+    float: right;
+    
+}
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    margin-right: 10px; /* Add right margin to space between buttons */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* DataTable Styling */
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin-top for spacing from other elements */
+    
+}
+
+table.dataTable thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+    float: right;
+    text-align: right;
+}
+
+table.dataTable tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Column Widths */
+table.dataTable th:nth-child(1),
+table.dataTable td:nth-child(1) {
+    width: 60px; /* ID column width */
+}
+
+table.dataTable th:nth-child(2),
+table.dataTable td:nth-child(2) {
+    width: 200px; /* Name column width */
+}
+
+table.dataTable th:nth-child(3),
+table.dataTable td:nth-child(3) {
+    width: 150px; /* Actions column width */
+}
+
+/* DataTable search and entries elements */
+.dataTables_wrapper .dataTables_filter input {
+    margin-right: 10px; /* Add margin-right to search input */
+}
+
+.dataTables_wrapper .dataTables_length select {
+    margin-left: 10px; /* Add margin-left to "Show Entries" select */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+        display: block;
+    }
+
+    table.dataTable thead th,
+    table.dataTable tbody td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 0;
+    }
+
+    table.dataTable thead th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    table.dataTable tbody tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    table.dataTable tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table.dataTable tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+}

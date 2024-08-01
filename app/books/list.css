@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Titan+One&display=swap');
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Page title styling */
+h3 {
+    font-family: "Ga Maamli", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Add Data button styling */
+.btn-add {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Filter form styling */
+.filter-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.filter-form select, .filter-form input[type="submit"] {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-form input[type="submit"]:hover {
+    background-color: #24b300;
+}
+
+/* Table styling */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.book-table th {
+    background-color: #1673d1;
+    color: #fafafa;
+}
+
+/* Action buttons container styling */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Reduced gap between buttons */
+}
+
+/* Action buttons styling */
+.btn-edit, .btn-delete {
+    padding: 5px 10px; /* Reduced padding for smaller buttons */
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px; /* Smaller font size for the buttons */
+}
+
+.btn-edit {
+    background-color: orange;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Styling for images in table */
+.book-table img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn-add {
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-form select, .filter-form input[type="submit"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .book-table, .book-table thead, .book-table tbody, .book-table th, .book-table td, .book-table tr {
+        display: block;
+    }
+
+    .book-table tr {
+        margin-bottom: 15px;
+    }
+
+    .book-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .book-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Media query for width 500px */
+@media (max-width: 500px) {
+    .filter-form select, .filter-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Media query for width 390px */
+@media (max-width: 390px) {
+    .filter-form select, .filter-form input[type="submit"] {
+        width: 100%;
+    }
+}
+    

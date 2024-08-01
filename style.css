@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Titan+One&display=swap');
+
+/* General Styles */
+body {
+    background-image: url('bg.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+span {
+    color: #007bff;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.sign-up {
+    background-color: rgb(11, 187, 26);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    background-color: #0f802b;
+}
+
+
+/* CSS untuk ikon menu hamburger */
+.menu-icon {
+    width: 35px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 4px;
+    background-color: #333; /* Warna garis */
+    transition: all 0.3s ease;
+}
+
+/* Gaya untuk perubahan ikon saat menu aktif */
+.menu-icon.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active .line2 {
+    opacity: 0;
+}
+
+.menu-icon.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Home Section */
+.home {
+    padding: 60px 20px 40px; /* Adjust padding as needed */
+    background-image: url(bg.jpg);
+    position: relative;
+    z-index: 1; /* Ensure it stays above other sections */
+}
+
+.home-title {
+    font-size: 40px; /* Adjust font size for better fitting */
+    margin-bottom: 40px; /* Reduce margin to fit image properly */
+}
+
+.home-content {
+    max-width: 1200px; /* Set a max-width for large screens */
+    margin: 0 auto; /* Center align the swiper container */
+    padding: 20px; /* Padding around the swiper container */
+}
+
+.home-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Optional: rounded corners for images */
+}
+
+/* Adjust template-wrapper size to fit well */
+.template-wrapper {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 150px; /* Width for template */
+    height: auto; /* Auto height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.template-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ensures all images fit within the fixed height */
+}
+
+
+p {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: "Ga Maamli", sans-serif;
+    color: #fafafa;
+    text-align: center;
+}
+
+
+.template-wrapper:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    max-height: 400px; /* Adjust max-height as needed */
+    overflow: hidden; /* Ensure no overflow */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visibility */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding inside each slide */
+    margin: 0; /* Remove margins around slides */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.swiper-slide img {
+    margin: 0; /* Remove margins around images */
+    padding: 0; /* Remove padding inside images */
+    border-radius: 4px; /* Optional: rounded corners for images */
+}
+
+/* Categories Section */
+.categories {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.categories-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between category boxes */
+}
+
+.category {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 200px; /* Set a fixed width for consistency */
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.category:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.category-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.category h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/* Authors Section */
+.authors {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.authors-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.author {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 220px; /* Increased width */
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.author:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.author-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.author h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.author p {
+    font-family: "Dancing Script", cursive;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Back to Home Link */
+.back-to-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.back-to-home-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #302f2f;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #ebe9e9;
+}
+
+.footer a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dfdcdc;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav.container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .home-title {
+        font-size: 28px;
+    }
+
+    .template-wrapper {
+        width: 150px;
+        height: 200px;
+    }
+
+    .template-wrapper img {
+        max-height: 150px;
+    }
+
+    .categories-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .authors-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author {
+        width: 100%;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
